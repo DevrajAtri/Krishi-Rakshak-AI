@@ -1,0 +1,576 @@
+{
+  "central": [
+    {
+      "name": "Capital Investment Subsidy Scheme (CISS) for Commercial Production Units for Organic/Biological Inputs",
+      "level": "Central",
+      "state_name": "N/A",
+      "category": "Bio-pesticides",
+      "detailed_description": "Credit-linked back-ended subsidy for setting up bio-fertilizer/bio-pesticide production units to promote organic inputs and reduce chemical dependency.",
+      "eligibility_criteria": "Individuals, farmer groups, proprietary/partnership firms, cooperatives, NGOs, companies, corporations.",
+      "subsidy_rate_or_benefit": "25% of total financial outlay (TFO), maximum Rs.40 lakh per unit for private; 100% up to Rs.160 lakh per unit for state government/agencies (200 TPA capacity).",
+      "how_it_is_disbursed": "Back-ended through NABARD for private; direct for state.",
+      "governing_department_ministry": "Ministry of Agriculture and Farmers Welfare (MoA&FW), National Centre of Organic Farming (NCOF)",
+      "years_applicable": "2004 onwards",
+      "official_source_links": ["https://www.nabard.org/content1.aspx?catid=23&id=592&mid=23", "https://www.pib.gov.in/PressReleasePage.aspx?PRID=1606305"]
+    },
+    {
+      "name": "Paramparagat Krishi Vikas Yojana (PKVY)",
+      "level": "Central",
+      "state_name": "N/A",
+      "category": "Integrated Pest Management, Bio-pesticides",
+      "detailed_description": "Subsidy for organic inputs like bio-pesticides, vermicompost, and botanical extracts to produce chemical-free agricultural products.",
+      "eligibility_criteria": "Farmers in clusters of at least 20 ha; preference for small/marginal farmers.",
+      "subsidy_rate_or_benefit": "Rs.31,000 per ha over 3 years; 62% (Rs.19,220/ha) directly to farmers for inputs.",
+      "how_it_is_disbursed": "Direct Benefit Transfer (DBT)",
+      "governing_department_ministry": "Ministry of Agriculture and Farmers Welfare (MoA&FW)",
+      "years_applicable": "2015-2026",
+      "official_source_links": ["https://dmsouthwest.delhi.gov.in/scheme/paramparagat-krishi-vikas-yojana", "https://sansad.in/getFile/annex/255/AU654.pdf?source=pqars"]
+    },
+    {
+      "name": "Mission Organic Value Chain Development for North Eastern Region (MOVCDNER)",
+      "level": "Central",
+      "state_name": "North Eastern States",
+      "category": "Bio-pesticides",
+      "detailed_description": "Subsidy for organic inputs including bio-pesticides to develop value chains in North Eastern regions.",
+      "eligibility_criteria": "Farmers in North Eastern states forming clusters.",
+      "subsidy_rate_or_benefit": "Rs.32,500 per ha over 3 years for organic inputs.",
+      "how_it_is_disbursed": "Direct Benefit Transfer (DBT)",
+      "governing_department_ministry": "Ministry of Agriculture and Farmers Welfare (MoA&FW)",
+      "years_applicable": "2015 onwards",
+      "official_source_links": ["https://www.pib.gov.in/PressReleasePage.aspx?PRID=1606305"]
+    },
+    {
+      "name": "Mission for Integrated Development of Horticulture (MIDH)",
+      "level": "Central",
+      "state_name": "N/A",
+      "category": "Integrated Pest Management",
+      "detailed_description": "Promotion of Integrated Nutrient Management (INM)/IPM, including bio-control labs and plant health clinics.",
+      "eligibility_criteria": "Farmers, public/private entities.",
+      "subsidy_rate_or_benefit": "For IPM/INM promotion: Rs.2,000/ha, 50% max Rs.1,000/ha (limited to 4 ha). Bio-control lab: Rs.80 lakh (public), Rs.40 lakh (private). Plant health clinic: Rs.20 lakh (public), Rs.10 lakh (private).",
+      "how_it_is_disbursed": "Back-ended subsidy",
+      "governing_department_ministry": "Ministry of Agriculture and Farmers Welfare (MoA&FW)",
+      "years_applicable": "2014 onwards",
+      "official_source_links": ["https://www.cii.in/webcms/upload/schemes.pdf"]
+    },
+    {
+      "name": "Plant Protection including Integrated Pest Management Scheme",
+      "level": "Central",
+      "state_name": "N/A",
+      "category": "Integrated Pest Management",
+      "detailed_description": "Mobilize farmers to use bio-pesticides and bio-agents; distribution of IPM tools and equipment.",
+      "eligibility_criteria": "Farmers",
+      "subsidy_rate_or_benefit": "Free distribution of bio-pesticides; 50% subsidy on plant protection equipment.",
+      "how_it_is_disbursed": "Direct distribution or reimbursement",
+      "governing_department_ministry": "Ministry of Agriculture and Farmers Welfare (MoA&FW)",
+      "years_applicable": "Ongoing",
+      "official_source_links": ["https://www.myscheme.gov.in/schemes/ipm"]
+    }
+  ],
+  "states": {
+    "Bihar": [
+      {
+        "name": "Pest Management Plan for Orchards and Crops",
+        "level": "State",
+        "state_name": "Bihar",
+        "category": "Crop Protection",
+        "detailed_description": "Subsidy for pesticide spraying on selected fruit crops (banana, papaya, mango, litchi).",
+        "eligibility_criteria": "Farmers growing notified fruit crops.",
+        "subsidy_rate_or_benefit": "50% (e.g., Rs.4,300 worth at Rs.2,150).",
+        "how_it_is_disbursed": "Direct reimbursement",
+        "governing_department_ministry": "Agriculture Department, Bihar",
+        "years_applicable": "2026 onwards",
+        "official_source_links": ["https://www.zeebiz.com/economy-infra/agricultue/news-rs-4300-pesticide-in-just-rs-2150-this-state-government-offers-agrochemical-subsidy-372512"]
+      }
+    ],
+    "Himachal Pradesh": [
+      {
+        "name": "CM Agriculture Promotion Scheme",
+        "level": "State",
+        "state_name": "Himachal Pradesh",
+        "category": "Integrated Pest Management",
+        "detailed_description": "Incentive for insect traps, lures, biocontrol agents, organic pesticides.",
+        "eligibility_criteria": "All farmers.",
+        "subsidy_rate_or_benefit": "50%",
+        "how_it_is_disbursed": "Direct incentive",
+        "governing_department_ministry": "Agriculture Department, Himachal Pradesh",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://www.uniindia.com/news/north/agriculture-farmers-una/3712923.html"]
+      }
+    ],
+    "Meghalaya": [
+      {
+        "name": "Plant Protection including Integrated Pest Management (IPM) Scheme",
+        "level": "State",
+        "state_name": "Meghalaya",
+        "category": "Integrated Pest Management",
+        "detailed_description": "Distribution of bio-pesticides/IPM tools; sale of sprayers and equipment.",
+        "eligibility_criteria": "Residents of Meghalaya.",
+        "subsidy_rate_or_benefit": "Free for bio-pesticides; 50% for equipment.",
+        "how_it_is_disbursed": "Direct distribution/reimbursement",
+        "governing_department_ministry": "Department of Agriculture & Farmers’ Welfare, Meghalaya",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://www.myscheme.gov.in/schemes/ipm"]
+      }
+    ],
+    "Odisha": [
+      {
+        "name": "Input Subsidy of Seeds, Fertilizers, Biofertilizers, Pesticides etc. under State Plan",
+        "level": "State",
+        "state_name": "Odisha",
+        "category": "Plant Protection Inputs",
+        "detailed_description": "Subsidy on pesticides as part of input assistance.",
+        "eligibility_criteria": "Farmers.",
+        "subsidy_rate_or_benefit": "Not publicly specified.",
+        "how_it_is_disbursed": "DBT",
+        "governing_department_ministry": "Department of Agriculture & Farmers' Empowerment, Odisha",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://agri.odisha.gov.in/sites/default/files/2022-10/SCHEMES.pdf"]
+      }
+    ],
+    "Maharashtra": [
+      {
+        "name": "State Agriculture Mechanization Scheme",
+        "level": "State",
+        "state_name": "Maharashtra",
+        "category": "Crop Protection",
+        "detailed_description": "Subsidy for agricultural equipment, including tractor-mounted sprayers for pesticide application.",
+        "eligibility_criteria": "Farmers with Aadhaar, 7/12 and 8-A certificates.",
+        "subsidy_rate_or_benefit": "Not publicly specified (varies by equipment).",
+        "how_it_is_disbursed": "DBT or reimbursement",
+        "governing_department_ministry": "Department of Agriculture, Maharashtra",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://mahadbt.maharashtra.gov.in/Farmer/SchemeData/SchemeData?str=E9DDFA703C38E51A147B39AD4D6A9082"]
+      }
+    ],
+    "Karnataka": [
+      {
+        "name": "Subsidy to Farmers for Purchase of Plant Protection Drugs for Disease & Pest Control of Horticulture Crops",
+        "level": "State",
+        "state_name": "Karnataka",
+        "category": "Crop Protection",
+        "detailed_description": "Subsidy for biological, attractive traps, chemical, and herbal pesticides for horticulture crops.",
+        "eligibility_criteria": "Horticulture farmers.",
+        "subsidy_rate_or_benefit": "Not publicly specified.",
+        "how_it_is_disbursed": "Direct to farmers",
+        "governing_department_ministry": "Horticulture Department, Karnataka",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://yuvakanaja.in/horticulture-dept/subsidy-to-farmers-for-purchase-of-plant-protection-drugs-for-disease-and-pest-control-of-horticulture-crops", "https://chitradurga.nic.in/en/agriculture"]
+      }
+    ],
+     "Uttar Pradesh": [
+      {
+        "name": "Plan for pest/disease control using various ecological resources",
+        "level": "State",
+        "state_name": "Uttar Pradesh",
+        "category": "Integrated Pest Management, Bio-pesticides, Crop Protection",
+        "detailed_description": "Subsidy for biopesticides, bioagents, seed treatment chemicals, agricultural protection chemicals, equipment and sprayers.",
+        "eligibility_criteria": "Farmers (75% on bio/seed treatment); small & marginal farmers (50% on chemicals/equipment).",
+        "subsidy_rate_or_benefit": "75% on biopesticides/bioagents/seed treatment chemicals; 50% on agricultural protection chemicals/equipment/sprayers (for small/marginal).",
+        "how_it_is_disbursed": "Typically DBT/reimbursement (not explicitly stated)",
+        "governing_department_ministry": "Agriculture Department, Uttar Pradesh (district-level implementation)",
+        "years_applicable": "Ongoing (as per current notification)",
+        "official_source_links": ["https://ghaziabad.nic.in/en/scheme/plan-for-pest-disease-control-using-various-ecological-resources/"]
+      }
+    ]
+    ,
+    "Goa": [
+      {
+        "name": "Assistance for Purchase of Bio-fertilizer, Bio Pesticides, etc.",
+        "level": "State",
+        "state_name": "Goa",
+        "category": "Bio-pesticides",
+        "detailed_description": "Subsidy for bio-pesticides, bio-insecticides, bio-control agents.",
+        "eligibility_criteria": "Farmers.",
+        "subsidy_rate_or_benefit": "50% limited to Rs.10,000/ha (max 2 ha).",
+        "how_it_is_disbursed": "Reimbursement",
+        "governing_department_ministry": "Directorate of Agriculture, Goa",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://static.goavidhansabha.gov.in/goalpub/docs/question_docs/file_7322e617-1824-4fac-8480-9c3d50e99eae.pdf"]
+      }
+    ],
+    "Tamil Nadu": [
+      {
+        "name": "Subsidy for Purchase of Plant Protection Drugs for Horticulture Crops",
+        "level": "State",
+        "state_name": "Tamil Nadu",
+        "category": "Crop Protection",
+        "detailed_description": "Subsidy for plant protection chemicals in horticulture.",
+        "eligibility_criteria": "Horticulture farmers.",
+        "subsidy_rate_or_benefit": "50% or Rs.500/ha whichever less.",
+        "how_it_is_disbursed": "Direct",
+        "governing_department_ministry": "Agriculture Department, Tamil Nadu",
+        "years_applicable": "2025-26",
+        "official_source_links": ["https://cms.tn.gov.in/cms_migrated/document/docfiles/agri_e_pn_2025_26.pdf"]
+      },
+      {
+        "name": "Distribution of Manually Operated Plant Protection Equipment",
+        "level": "State",
+        "state_name": "Tamil Nadu",
+        "category": "Plant Protection Inputs",
+        "detailed_description": "Subsidy on equipment for pesticide application.",
+        "eligibility_criteria": "Farmers.",
+        "subsidy_rate_or_benefit": "50% or Rs.800 whichever less.",
+        "how_it_is_disbursed": "Reimbursement",
+        "governing_department_ministry": "Agriculture Department, Tamil Nadu",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://www.myscheme.gov.in/schemes/domoppe"]
+      }
+    ],
+    "Rajasthan": [
+      {
+        "name": "Subsidy on Bio-pesticides and Plant Protection Chemicals",
+        "level": "State",
+        "state_name": "Rajasthan",
+        "category": "Bio-pesticides, Crop Protection",
+        "detailed_description": "Subsidy on bio-fertilizers, bio-pesticides, PP chemicals.",
+        "eligibility_criteria": "Farmers.",
+        "subsidy_rate_or_benefit": "Not specified (varies by scheme).",
+        "how_it_is_disbursed": "Through departmental tenders.",
+        "governing_department_ministry": "Department of Agriculture, Rajasthan",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://www.tourism.rajasthan.gov.in/content/dam/agriculture/Agriculture%20Department/ecitizen/tenders/tender_10546.pdf"]
+      }
+    ],
+    "Punjab": [
+      {
+        "name": "Weedicides Subsidy under Rice Productivity Program",
+        "level": "State",
+        "state_name": "Punjab",
+        "category": "Crop Protection",
+        "detailed_description": "Subsidy on weedicides for rice weed control.",
+        "eligibility_criteria": "Rice farmers.",
+        "subsidy_rate_or_benefit": "30%",
+        "how_it_is_disbursed": "Cost sharing.",
+        "governing_department_ministry": "Agriculture Department, Punjab",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://agripunjab.gov.pk/system/files/EOI%20%20Weedicides.pdf"]
+      }
+    ],
+    "Gujarat": [
+      {
+        "name": "Subsidy on Seeds, Fertilizers and Pesticides to Tribal Farmers of Dang District",
+        "level": "State",
+        "state_name": "Gujarat",
+        "category": "Crop Protection",
+        "detailed_description": "Subsidy for pesticides to tribal farmers.",
+        "eligibility_criteria": "Tribal farmers in Dang.",
+        "subsidy_rate_or_benefit": "Not specified.",
+        "how_it_is_disbursed": "Direct",
+        "governing_department_ministry": "Agriculture Department, Gujarat",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://agri.gujarat.gov.in/Home/SchemesDetailsPage?Id=kiT1cdj5JcjpYuOefRUCoQ%3D%3D&domain=KQBjMeZAUYtrIgvpebJ01g%3D%3D"]
+      }
+    ],
+    "Kerala": [
+      {
+        "name": "Promotion of INM/IPM under MIDH",
+        "level": "State",
+        "state_name": "Kerala",
+        "category": "Integrated Pest Management",
+        "detailed_description": "Assistance for INM/IPM in horticulture.",
+        "eligibility_criteria": "Farmers.",
+        "subsidy_rate_or_benefit": "50% max Rs.1,000/ha (4 ha).",
+        "how_it_is_disbursed": "Direct",
+        "governing_department_ministry": "State Horticulture Mission, Kerala",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://shm.kerala.gov.in/scheme-details"]
+      }
+    ],
+    "West Bengal": [
+      {
+        "name": "Subsidy on Plant Protection Machinery",
+        "level": "State",
+        "state_name": "West Bengal",
+        "category": "Plant Protection Inputs",
+        "detailed_description": "Subsidy on sprayers for pesticide application.",
+        "eligibility_criteria": "Farmers.",
+        "subsidy_rate_or_benefit": "50%.",
+        "how_it_is_disbursed": "Direct",
+        "governing_department_ministry": "Department of Agriculture, West Bengal",
+        "years_applicable": "2024-25",
+        "official_source_links": ["https://wbfms.wb.gov.in/documents/Product_List_subsidy_24-25.pdf"]
+      }
+    ],
+    "Telangana": [
+      {
+        "name": "Rythu Bandhu Scheme",
+        "level": "State",
+        "state_name": "Telangana",
+        "category": "Crop Protection",
+        "detailed_description": "Investment support for inputs including pesticides.",
+        "eligibility_criteria": "Farmers with land records.",
+        "subsidy_rate_or_benefit": "Rs.5,000/acre/season.",
+        "how_it_is_disbursed": "DBT",
+        "governing_department_ministry": "Agriculture Department, Telangana",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://www.manage.gov.in/fpoacademy/CGSchemes/Telangana%20Govt%20Schemes.pdf"]
+      }
+    ],
+    "Assam": [
+      {
+        "name": "Integrated Pest Management Promotion",
+        "level": "State",
+        "state_name": "Assam",
+        "category": "Integrated Pest Management",
+        "detailed_description": "Promotion of IPM practices through eco-friendly measures.",
+        "eligibility_criteria": "Farmers.",
+        "subsidy_rate_or_benefit": "Not specified.",
+        "how_it_is_disbursed": "Direct support.",
+        "governing_department_ministry": "Directorate of Agriculture, Assam",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://diragri.assam.gov.in/portlet-innerpage/integrated-pest-management-ipm"]
+      }
+    ],
+    "Andhra Pradesh": [
+      {
+        "name": "Input Subsidy under State Plan (Seeds, Fertilizers, Pesticides)",
+        "level": "State",
+        "state_name": "Andhra Pradesh",
+        "category": "Plant Protection Inputs",
+        "detailed_description": "Subsidy on pesticides as part of agricultural input assistance.",
+        "eligibility_criteria": "Farmers.",
+        "subsidy_rate_or_benefit": "Not specified (varies by input).",
+        "how_it_is_disbursed": "Direct reimbursement",
+        "governing_department_ministry": "Department of Agriculture, Andhra Pradesh",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://apagrisnet.gov.in/", "https://apseeds.ap.gov.in/Website/Schemes.aspx"]
+      },
+      {
+        "name": "MIDH - IPM Promotion",
+        "level": "Central (Implemented in State)",
+        "state_name": "Andhra Pradesh",
+        "category": "Integrated Pest Management",
+        "detailed_description": "Subsidy for INM/IPM in horticulture, including bio-control.",
+        "eligibility_criteria": "Horticulture farmers.",
+        "subsidy_rate_or_benefit": "Rs.1,000/ha (max 4 ha).",
+        "how_it_is_disbursed": "Back-ended",
+        "governing_department_ministry": "MoA&FW",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://www.cii.in/webcms/upload/schemes.pdf"]
+      }
+    ],
+    "Arunachal Pradesh": [
+      {
+        "name": "Integrated Pest Management Programme",
+        "level": "State",
+        "state_name": "Arunachal Pradesh",
+        "category": "Integrated Pest Management, Bio-pesticides",
+        "detailed_description": "Subsidy on bio-pesticides and IPM tools.",
+        "eligibility_criteria": "Farmers.",
+        "subsidy_rate_or_benefit": "50%.",
+        "how_it_is_disbursed": "Direct",
+        "governing_department_ministry": "Department of Agriculture, Arunachal Pradesh",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://anjaw.nic.in/agriculture"]
+      }
+    ],
+    "Chhattisgarh": [
+      {
+        "name": "MIDH - INM/IPM Promotion",
+        "level": "Central (Implemented in State)",
+        "state_name": "Chhattisgarh",
+        "category": "Integrated Pest Management",
+        "detailed_description": "Subsidy for bio-pesticides and IPM in horticulture.",
+        "eligibility_criteria": "Farmers.",
+        "subsidy_rate_or_benefit": "50% max Rs.1,000/ha.",
+        "how_it_is_disbursed": "Direct",
+        "governing_department_ministry": "MoA&FW",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://agriportal.cg.nic.in/Horticulture/PDF/Programs_Schemes/MIDH/MIDH_Guidelines_Revised_2025.pdf"]
+      }
+    ],
+    "Haryana": [
+      {
+        "name": "Subsidy on Plant Protection Equipment",
+        "level": "State",
+        "state_name": "Haryana",
+        "category": "Plant Protection Inputs",
+        "detailed_description": "Subsidy on sprayers and equipment for pesticide application.",
+        "eligibility_criteria": "Farmers.",
+        "subsidy_rate_or_benefit": "50-80%.",
+        "how_it_is_disbursed": "Reimbursement",
+        "governing_department_ministry": "Department of Agriculture & Farmers Welfare, Haryana",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://agriharyana.gov.in/"]
+      },
+      {
+        "name": "MIDH - IPM",
+        "level": "Central (Implemented in State)",
+        "state_name": "Haryana",
+        "category": "Integrated Pest Management",
+        "detailed_description": "Promotion of IPM/INM.",
+        "eligibility_criteria": "Farmers.",
+        "subsidy_rate_or_benefit": "Rs.1,000/ha.",
+        "how_it_is_disbursed": "Back-ended",
+        "governing_department_ministry": "MoA&FW",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://www.cii.in/webcms/upload/schemes.pdf"]
+      }
+    ],
+    "Jharkhand": [
+      {
+        "name": "Input Subsidy for Organic Farming",
+        "level": "State",
+        "state_name": "Jharkhand",
+        "category": "Bio-pesticides",
+        "detailed_description": "Subsidy on bio-pesticides under organic schemes.",
+        "eligibility_criteria": "Farmers.",
+        "subsidy_rate_or_benefit": "50-80%.",
+        "how_it_is_disbursed": "DBT",
+        "governing_department_ministry": "Department of Agriculture, Jharkhand",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["http://www.organicjharkhand.in/"]
+      }
+    ],
+    "Madhya Pradesh": [
+      {
+        "name": "IPM Promotion",
+        "level": "State",
+        "state_name": "Madhya Pradesh",
+        "category": "Integrated Pest Management",
+        "detailed_description": "Advisory and subsidies for IPM in crops like soybean, maize.",
+        "eligibility_criteria": "Farmers.",
+        "subsidy_rate_or_benefit": "50%.",
+        "how_it_is_disbursed": "Direct",
+        "governing_department_ministry": "Department of Agriculture, Madhya Pradesh",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://www.global-agriculture.com/india-region/government-of-madhya-pradesh-issues-advisory-on-pest-and-weed-management-for-soybean-and-maize-crops"]
+      }
+    ],
+    "Manipur": [
+      {
+        "name": "Bio-pesticide Promotion under Central Schemes",
+        "level": "Central (Implemented in State)",
+        "state_name": "Manipur",
+        "category": "Bio-pesticides",
+        "detailed_description": "Subsidy for bio-pesticides in IPM.",
+        "eligibility_criteria": "Farmers.",
+        "subsidy_rate_or_benefit": "50-75%.",
+        "how_it_is_disbursed": "Reimbursement",
+        "governing_department_ministry": "MoA&FW",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://pmc.ncbi.nlm.nih.gov/articles/PMC7181464"]
+      }
+    ],
+    "Mizoram": [
+      {
+        "name": "Plant Protection Scheme",
+        "level": "State",
+        "state_name": "Mizoram",
+        "category": "Plant Protection Inputs, IPM",
+        "detailed_description": "Assistance for IPM and plant protection.",
+        "eligibility_criteria": "Farmers.",
+        "subsidy_rate_or_benefit": "50%.",
+        "how_it_is_disbursed": "Direct distribution",
+        "governing_department_ministry": "Department of Agriculture, Mizoram",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://agriculturemizoram.nic.in/pages/plantprotection.html"]
+      }
+    ],
+    "Nagaland": [
+      {
+        "name": "RKVY - IPM",
+        "level": "Central (Implemented in State)",
+        "state_name": "Nagaland",
+        "category": "Integrated Pest Management",
+        "detailed_description": "Subsidy for IPM under RKVY.",
+        "eligibility_criteria": "Farmers.",
+        "subsidy_rate_or_benefit": "50%.",
+        "how_it_is_disbursed": "DBT",
+        "governing_department_ministry": "MoA&FW/Department of Agriculture, Nagaland",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://kohima.nic.in/scheme/rashtriya-krishi-vikas-yojana-rkvy-nagaland"]
+      }
+    ],
+    "Sikkim": [
+      {
+        "name": "Organic Farming Incentives",
+        "level": "State",
+        "state_name": "Sikkim",
+        "category": "Bio-pesticides",
+        "detailed_description": "Subsidies for bio-pesticides under organic policy (chemical ban).",
+        "eligibility_criteria": "Farmers.",
+        "subsidy_rate_or_benefit": "50-85%.",
+        "how_it_is_disbursed": "Direct",
+        "governing_department_ministry": "Department of Agriculture, Sikkim",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://www.futurepolicy.org/healthy-ecosystems/sikkims-state-policy-on-organic-farming-and-sikkim-organic-mission-india"]
+      }
+    ],
+    "Tripura": [
+      {
+        "name": "Integrated Pest and Nutrient Management Plan",
+        "level": "State",
+        "state_name": "Tripura",
+        "category": "Integrated Pest Management",
+        "detailed_description": "IPM strategies with subsidies for bio-pesticides.",
+        "eligibility_criteria": "Tribal farmers.",
+        "subsidy_rate_or_benefit": "50%.",
+        "how_it_is_disbursed": "Direct",
+        "governing_department_ministry": "Tribal Welfare Department, Tripura",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://twd.tripura.gov.in/sites/default/files/Integrated%20Pest%20and%20Nutrient%20Management%20Plan%20-%20TRESP.pdf"]
+      }
+    ],
+    "Uttarakhand": [
+      {
+        "name": "Organic and Natural Farming Scheme",
+        "level": "State",
+        "state_name": "Uttarakhand",
+        "category": "Bio-pesticides, IPM",
+        "detailed_description": "Subsidy for bio-pesticides in organic farming.",
+        "eligibility_criteria": "Farmers.",
+        "subsidy_rate_or_benefit": "50-75%.",
+        "how_it_is_disbursed": "DBT",
+        "governing_department_ministry": "Department of Agriculture, Uttarakhand",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://agriculture.uk.gov.in/scheme/organic-and-natural-farming"]
+      }
+    ]
+  },
+  "union_territories": {
+    "Delhi": [
+      {
+        "name": "MIDH - IPM (Urban Focus)",
+        "level": "Central",
+        "state_name": "Delhi (UT)",
+        "category": "Integrated Pest Management",
+        "detailed_description": "IPM subsidies for urban farming.",
+        "eligibility_criteria": "Farmers/urban growers.",
+        "subsidy_rate_or_benefit": "50%.",
+        "how_it_is_disbursed": "Reimbursement",
+        "governing_department_ministry": "MoA&FW",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://prsindia.org/policy/analytical-reports/state-agriculture-india"]
+      }
+    ],
+    "Jammu & Kashmir": [
+      {
+        "name": "RWBCIS (Weather-Based Crop Insurance)",
+        "level": "Central/State",
+        "state_name": "Jammu & Kashmir (UT)",
+        "category": "Crop Protection",
+        "detailed_description": "Subsidy on insurance covering pest risks.",
+        "eligibility_criteria": "Apple farmers.",
+        "subsidy_rate_or_benefit": "5% premium subsidy.",
+        "how_it_is_disbursed": "Direct",
+        "governing_department_ministry": "Department of Agriculture, Jammu & Kashmir",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://www.sciencedirect.com/science/article/pii/S2212096324000536"]
+      },
+      {
+        "name": "MIDH - IPM for Horticulture",
+        "level": "Central",
+        "state_name": "Jammu & Kashmir (UT)",
+        "category": "Integrated Pest Management",
+        "detailed_description": "Subsidy for bio-pesticides in orchards.",
+        "eligibility_criteria": "Farmers.",
+        "subsidy_rate_or_benefit": "50-75%.",
+        "how_it_is_disbursed": "Back-ended",
+        "governing_department_ministry": "MoA&FW",
+        "years_applicable": "Ongoing",
+        "official_source_links": ["https://www.mdpi.com/2071-1050/16/17/7839"]
+      }
+    ]
+  }
+}
