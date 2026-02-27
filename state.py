@@ -16,4 +16,6 @@ class AgentState(TypedDict):
     subsidy_info: Dict[str, str]  
     
     # --- FLAGS ---
-    error: Optional[str]            
+    error: Optional[str]    
+
+    environmental_impact_report: Optional[Dict]        

@@ -1,49 +1,163 @@
 import streamlit as st
 import tempfile
 import os
-import shutil
-from typing import Dict, List
+from typing import Dict, List, Any
 from dotenv import load_dotenv
 load_dotenv()
 
 from graph import app  
 from constants import STATE_SUBSIDY_DOMAINS
 
+# --- PAGE CONFIGURATION ---
 st.set_page_config(
-    page_title="Agri-Agent | AI Pest Control",
-    page_icon="🌾",
+    page_title="Agri-Agent | Sustainability Command Center",
+    page_icon="🌿",
     layout="wide"
 )
 
+# --- CUSTOM CSS STYLING (The Professional "Green UI" Look) ---
+# Replace your current st.markdown("""<style>...""") with this:
+
 st.markdown("""
 <style>
+    /* Force Light Theme Text Colors globally */
+    .stApp {
+        background-color: #F9F5F2; /* Light Sandstone Background */
+        font-family: 'Inter', sans-serif;
+    }
+    
+    /* Force standard markdown text to be dark */
+    div[data-testid="stMarkdownContainer"] p, 
+    div[data-testid="stMarkdownContainer"] h1, 
+    div[data-testid="stMarkdownContainer"] h2, 
+    div[data-testid="stMarkdownContainer"] h3, 
+    div[data-testid="stMarkdownContainer"] li {
+        color: #2E2E2E !important;
+    }
+
+    /* Modern Dashboard Headers */
     .main-header {
         font-size: 2.5rem;
-        color: #2E7D32; /* Agri Green */
-        font-weight: 700;
+        color: #1B5E20 !important; 
+        font-weight: 800;
+        letter-spacing: -0.5px;
+        margin-bottom: 0rem;
     }
     .sub-header {
+        font-size: 1.2rem;
+        color: #555555 !important;
+        margin-bottom: 2rem;
+    }
+    .section-header {
         font-size: 1.5rem;
-        color: #1B5E20;
+        color: #1B5E20 !important;
+        font-weight: 700;
         margin-top: 1rem;
+        margin-bottom: 1rem;
+        border-bottom: 2px solid #8A9668; 
+        padding-bottom: 0.5rem;
     }
-    .stAlert {
+    
+    /* KPI Status Bar */
+    .kpi-container {
+        display: flex;
+        justify-content: space-around;
+        background: white;
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        margin-bottom: 2rem;
+        border-top: 4px solid #F4C93B; 
+    }
+    .kpi-metric { text-align: center; }
+    .kpi-value { font-size: 1.4rem; font-weight: 700; color: #1B5E20 !important; }
+    .kpi-label { font-size: 0.9rem; color: #666666 !important; }
+
+    /* Diagnosis Card (Left Column) */
+    .diagnosis-card {
+        background: white;
+        padding: 1.5rem;
+        border-radius: 15px;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.03);
+        height: 100%;
+        color: #2E2E2E;
+    }
+
+    /* Main Decision Matrix Card (Centerpiece) */
+    .decision-matrix-card {
+        background: white;
+        padding: 2rem;
+        border-radius: 15px;
+        box-shadow: 0 6px 12px rgba(0,0,0,0.05);
+        border: 1px solid #E0DED0;
+        color: #2E2E2E;
+    }
+    
+    /* Individual Treatment Comparison Cards */
+    .bio-card {
+        border-left: 5px solid #8A9668; 
+        background: #F4F6F0;
+        padding: 1.2rem;
+        margin-bottom: 1rem;
         border-radius: 8px;
+        color: #2E2E2E !important;
     }
-    .card {
+    .synth-card {
+        border-left: 5px solid #D32F2F; 
+        background: #FFF0F0;
+        padding: 1.2rem;
+        margin-bottom: 1rem;
+        border-radius: 8px;
+        color: #2E2E2E !important;
+    }
+    .card-title {
+        font-weight: 700;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+        color: #1B5E20 !important;
+    }
+    .metric-row {
+        display: flex;
+        justify-content: space-between;
+        font-size: 0.9rem;
+        color: #333333 !important;
+        margin-bottom: 0.3rem;
+    }
+
+    /* Logic & Reasoning Box */
+    .logic-box {
+        background-color: #E8F5E9;
+        border: 1px solid #C8E6C9;
         padding: 1.5rem;
         border-radius: 10px;
-        background-color: #f0f8f0;
-        border: 1px solid #c8e6c9;
-        margin-bottom: 1rem;
+        margin-top: 1.5rem;
+        color: #2E2E2E !important;
+    }
+    .logic-header {
+        font-weight: 700;
+        color: #1B5E20 !important;
+        margin-bottom: 0.8rem;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Subsidy Card */
+    .subsidy-card {
+        background: white;
+        border-left: 5px solid #F4C93B;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-bottom: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+        color: #2E2E2E !important;
     }
 </style>
 """, unsafe_allow_html=True)
 
-
+# --- SIDEBAR INPUTS ---
 with st.sidebar:
-    st.image("https://cdn-icons-png.flaticon.com/512/606/606041.png", width=80)
-    st.title("Field Inputs")
+    st.image("https://cdn-icons-png.flaticon.com/512/2917/2917995.png", width=70) # Updated icon
+    st.markdown("### Field Data Input")
 
     with st.form("analysis_form"):
         uploaded_file = st.file_uploader(
@@ -67,126 +181,180 @@ with st.sidebar:
             crop = st.text_input("Crop Name", value="Wheat")
 
         run_btn = st.form_submit_button(
-            "🚀 Analyze Field", 
+            "🚀 Initialize Analysis", 
             use_container_width=True
         )
 
-    if st.button("🔄 Reset / New Search"):
+    if st.button("🔄 New Session"):
         st.session_state.clear()
         st.rerun()
 
+# --- MAIN DASHBOARD HEADER ---
+st.markdown('<div class="main-header">🌿 Agri-Agent Command Center</div>', unsafe_allow_html=True)
+st.markdown('<div class="sub-header">AI-Driven Pest Diagnostics & Resource Optimization Engine</div>', unsafe_allow_html=True)
 
 
-st.markdown('<div class="main-header">🌾 Agri-Agent: Autonomous Pest Control</div>', unsafe_allow_html=True)
-st.markdown("Your AI-powered Agricultural Extension Officer.")
-
+# --- MAIN APP LOGIC ---
 if run_btn and uploaded_file:
-   
+    
+    # 1. SAVE IMAGE
     with tempfile.NamedTemporaryFile(delete=False, suffix=".jpg") as tmp_file:
         tmp_file.write(uploaded_file.getvalue())
         temp_image_path = tmp_file.name
 
-    
-    status_container = st.status("Initializing Agent...", expanded=True)
-    
-    try:
-        
-        status_container.write("🔍 [Node A] Analyzing visual symptoms...")
-        status_container.write(f"🌍 [Node B] Verifying against {location} agricultural data...")
-        status_container.write("💊 [Node C] Searching CIBRC approved pesticides...")
-        status_container.write("💰 [Node D] Checking subsidy schemes...")
-        
-        
+    # 2. RUN THE AI PIPELINE (with status spinner)
+    with st.spinner("Processing Field Data... Organizing Sustainability Protocols..."):
         initial_state = {
             "image_path": temp_image_path,
             "location": location,
             "month": month,
             "crop": crop,
-            
             "recommended_pesticides": [],
-            "detailed_pesticide_info": [],
+            "environmental_impact_report": None,
             "subsidy_info": []
         }
-        
-        
         final_state = app.invoke(initial_state)
-        
-        status_container.update(label="Analysis Complete!", state="complete", expanded=False)
 
-        st.markdown('<div class="sub-header">1. Diagnosis Report</div>', unsafe_allow_html=True)
-        col_img, col_diag = st.columns([1, 2])
-        
-        with col_img:
-            st.image(uploaded_file, caption="Field Sample", width=300, channels="RGB")
+    # 3. EXTRACT DATA FOR DASHBOARD
+    pest_name = final_state.get("confirmed_pest", "Unknown")
+    confidence = final_state.get("confidence_score", 0.0)
+    reasoning = final_state.get("decision_reasoning", "")
+    treatments = final_state.get("recommended_pesticides", [])
+    eco_report = final_state.get("environmental_impact_report")
+    subsidies = final_state.get("subsidy_info", [])
 
-        
-        with col_diag:
-            pest_name = final_state.get("confirmed_pest", "Unknown")
-            confidence = final_state.get("confidence_score", 0.0)
-            
-            if confidence > 0.7:
-                color = "green"
-            elif confidence > 0.4:
-                color = "orange"
-            else:
-                color = "red"
-                
-            st.markdown(f"""
-            <div class="card">
-                <h3 style="color: {color}; margin:0;">Identified Pest: {pest_name}</h3>
-                <p><strong>Confidence:</strong> {confidence * 100:.1f}%</p>
-                <p><strong>Reasoning:</strong> {final_state.get('decision_reasoning')}</p>
+    # 4. TOP KPI STATUS BAR
+    st.markdown(f"""
+        <div class="kpi-container">
+            <div class="kpi-metric">
+                <div class="kpi-value">{pest_name}</div>
+                <div class="kpi-label">Target Pest Detected</div>
             </div>
-            """, unsafe_allow_html=True)
+            <div class="kpi-metric">
+                <div class="kpi-value">{confidence * 100:.1f}%</div>
+                <div class="kpi-label">Diagnostic Confidence</div>
+            </div>
+            <div class="kpi-metric">
+                <div class="kpi-value">{location}, {month}</div>
+                <div class="kpi-label">Environmental Context</div>
+            </div>
+        </div>
+    """, unsafe_allow_html=True)
+
+    # 5. MAIN ASYMMETRICAL LAYOUT (1/4 Left, 3/4 Right)
+    col_diag, col_decision = st.columns([1, 3], gap="medium")
+
+    # --- LEFT COLUMN: DIAGNOSIS CASE FILE ---
+    with col_diag:
+        st.markdown('<div class="section-header">📋 Case File</div>', unsafe_allow_html=True)
+        with st.container(border=False):
+            st.markdown('<div class="diagnosis-card">', unsafe_allow_html=True)
+            st.image(uploaded_file, caption="Visual Evidence", use_container_width=True)
             
-          
-            with st.expander("🕵️ View Verification Evidence (Internal Monologue)"):
-                st.info("The agent performed cross-verification using these searches:")
+            st.markdown("#### 🕵️ Verification Summary")
+            st.info(reasoning.split('.')[0] + ".") # Show just the first sentence for crispness
+            with st.expander("View Full Cross-Reference Data"):
+                 st.write(reasoning)
+            st.markdown('</div>', unsafe_allow_html=True)
+
+    # --- RIGHT COLUMN: THE SUSTAINABILITY DECISION ENGINE ---
+    with col_decision:
+        st.markdown('<div class="section-header">🧠 Treatment Decision Engine & Sustainability Matrix</div>', unsafe_allow_html=True)
+        
+        with st.container(border=False):
+             st.markdown('<div class="decision-matrix-card">', unsafe_allow_html=True)
+
+             # A. Separate Biological vs Synthetic Options
+             bio_opts = [t for t in treatments if "biological" in str(t.get('category','')).lower() or "natural" in str(t.get('category','')).lower()]
+             synth_opts = [t for t in treatments if "synthetic" in str(t.get('category','')).lower()]
+             
+             # B. Side-by-Side Comparison Columns
+             col_bio, col_synth = st.columns(2, gap="large")
+
+             with col_bio:
+                 st.markdown("### 🌿 Biological / IPM Options (Preferred)")
+                 if bio_opts:
+                     for t in bio_opts:
+                         st.markdown(f"""
+                         <div class="bio-card">
+                             <div class="card-title">{t.get('chemical_name')}</div>
+                             <div class="metric-row"><span>📦 Dosage:</span> <strong>{t.get('dosage')}</strong></div>
+                             <div class="metric-row"><span>💰 Est. Cost:</span> <span>₹{t.get('estimated_cost')}</span></div>
+                         </div>
+                         """, unsafe_allow_html=True)
+                 else:
+                     st.warning("No specific biological options found in current CIBRC database for this severity.")
+
+             with col_synth:
+                 st.markdown("### 🧪 Synthetic Options (Higher Impact)")
+                 if synth_opts:
+                     for t in synth_opts:
+                         st.markdown(f"""
+                         <div class="synth-card">
+                             <div class="card-title">{t.get('chemical_name')}</div>
+                             <div class="metric-row"><span>📦 Dosage:</span> <strong>{t.get('dosage')}</strong></div>
+                             <div class="metric-row"><span>💰 Est. Cost:</span> <span>₹{t.get('estimated_cost')}</span></div>
+                         </div>
+                         """, unsafe_allow_html=True)
+                 else:
+                    st.info("No specific synthetic chemical recommendations necessary based on current data.")
+
+             # C. The AI Logic Core (Node E Output)
+             if eco_report:
+                score = eco_report.get("overall_eco_score", 0)
                 
-                st.write(final_state.get('decision_reasoning'))
+                st.markdown("""<div class="logic-box">
+                    <div class="logic-header">🤖 AI Sustainability Logic & Trade-off Analysis</div>
+                    """, unsafe_allow_html=True)
+                
+                # 1. Overall Score Visualization
+                col_gauge, col_text = st.columns([1, 3])
+                with col_gauge:
+                     st.metric("Protocol Eco-Score", f"{score}/100", delta="Sustainable" if score > 70 else "High Impact", delta_color="normal" if score > 70 else "inverse")
+                with col_text:
+                     # Display the Optimization Tip
+                     st.markdown(f"**💡 Resource Optimization Strategy:** {eco_report.get('optimization_tip')}")
 
-       
-        st.markdown("---")
-        st.markdown('<div class="sub-header">2. Recommended Treatment (CIBRC Approved)</div>', unsafe_allow_html=True)
-        
-        treatments = final_state.get("detailed_pesticide_info", [])
-        
-        if treatments:
-            for t in treatments:
-                with st.container():
-                    cols = st.columns([2, 1, 1])
-                    cols[0].markdown(f"**🧪 {t.get('chemical_name')}**")
-                    cols[1].markdown(f"**Dosage:** {t.get('dosage')}")
-                    cols[2].markdown(f"**Wait Period:** {t.get('safety_period')}")
-        else:
-            st.warning("No specific chemical recommendations found. Please consult a local expert.")
+                st.markdown("---")
+                # 2. Detailed Comparative Logic from Node E
+                st.markdown("#### ⚖️ Comparative Risk Calculation:")
+                treatment_analysis = eco_report.get("treatments_analysis", [])
+                if treatment_analysis:
+                    for analysis in treatment_analysis:
+                        icon = "🌿" if "A" in analysis.get('toxicity_grade','') or "B" in analysis.get('toxicity_grade','') else "🧪"
+                        st.markdown(f"""
+                        **{icon} {analysis.get('chemical_name')}:** {analysis.get('calculation_and_logic')}
+                        """)
+                        # Small metric pills below the logic
+                        st.caption(f"Toxicity: {analysis.get('toxicity_grade')} | Water Risk: {analysis.get('water_risk')} | Carbon: {analysis.get('carbon_impact')}")
+                        st.markdown("<br>", unsafe_allow_html=True)
+                
+                st.markdown('</div>', unsafe_allow_html=True) # End logic-box
 
-        st.markdown("---")
-        st.markdown('<div class="sub-header">3. Financial Aid & Schemes</div>', unsafe_allow_html=True)
-        
-        schemes = final_state.get("subsidy_info", [])
-        
-        if schemes:
-            for s in schemes:
-                st.info(f"""
-                **🏦 {s.get('scheme_name')}** {s.get('benefit_details')}  
-                *Eligibility:* {s.get('eligibility')}
-                """)
-        else:
-            st.markdown(f"No specific online schemes found for **{location}** at this moment. Visit your local Agriculture Office.")
-            
-    except Exception as e:
-        st.error(f"System Error: {str(e)}")
-        
-        st.warning("The agent encountered a connection issue, but here is a general analysis based on visual data...")
-    
-    finally:
-        
-        if 'temp_image_path' in locals():
-            os.remove(temp_image_path)
+             st.markdown('</div>', unsafe_allow_html=True) # End decision-matrix-card
+
+    # 6. BOTTOM SECTION: SUBSIDIES
+    st.markdown('<div class="section-header">🏦 Available Financial Support & Schemes</div>', unsafe_allow_html=True)
+    if subsidies:
+        cols = st.columns(3) # Display in 3 columns for a cleaner look
+        for i, s in enumerate(subsidies):
+            with cols[i % 3]:
+                st.markdown(f"""
+                <div class="subsidy-card">
+                    <strong>{s.get('scheme_name')}</strong><br>
+                    <span style="font-size:0.9rem">{s.get('benefit_details')}</span><br>
+                    <em style="font-size:0.8rem; color:#666">Eligibility: {s.get('eligibility')}</em>
+                </div>
+                """, unsafe_allow_html=True)
+    else:
+        st.info(f"No specific online schemes registered for {crop} in {location} currently. Contact local Krishi Vigyan Kendra (KVK).")
+
+
+    # Cleanup
+    if 'temp_image_path' in locals():
+        os.remove(temp_image_path)
 
 elif run_btn and not uploaded_file:
-    st.warning("Please upload an image first.")
+    st.warning("⚠️ Please upload a field image to initiate analysis.")
 else:
-    
-    st.info("👈 Upload an image and select your region to begin.")
+    st.info("👈 awaiting input parameters to initialize command center...")
